@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tailwind-Navbar</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="../dist/output.css" />
+  </head>
+  <body class="mb-5 bg-gray-200 dark:bg-slate-800">
+    <header
+      class="relative h-20 border-b-2 border-gray-400 bg-gray-300 shadow-md"
+    >
+      <nav class="h-full bg-gray-300 dark:bg-slate-700">
+        <div>
+          <button
+            type="button"
+            class="absolute left-2 top-5 md:hidden"
+            id="openMenu"
+          >
+            <span><i class="bi bi-list text-3xl dark:text-gray-200"></i></span>
+          </button>
+          <button
+            type="button"
+            class="absolute left-2 top-5 hidden md:hidden"
+            id="closeMenu"
+          >
+            <span
+              ><i class="bi bi-x-square text-3xl dark:text-gray-200"></i
+            ></span>
+          </button>
+        </div>
+        <div
+          class="flex h-full items-center justify-center px-32 md:justify-between md:pl-16"
+        >
+          <div>
+            <a href="#" class="">
+              <img
+                src="../img/livlogo.png"
+                alt="logo"
+                class="w-20 p-2 md:p-0"
+              />
+            </a>
+          </div>
+          <ul
+            class="hidden h-full items-center justify-end gap-8 text-xl text-gray-600 dark:text-gray-300 md:flex"
+          >
+            <li class="px-6">
+              <a
+                href="#"
+                class="font-bold hover:text-blue-900 dark:hover:text-amber-200"
+                >Home</a
+              >
+            </li>
+            <li class="px-6">
+              <a
+                href="#"
+                class="font-bold hover:text-blue-900 dark:hover:text-amber-200"
+                >Blogs</a
+              >
+            </li>
+            <li class="px-6">
+              <a
+                href="#"
+                class="font-bold hover:text-blue-900 dark:hover:text-amber-200"
+                >About</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div>
+          <button class="absolute right-6 top-4 p-2" id="darkMode">
+            <i
+              class="bi bi-moon-stars-fill text-2xl hover:hover:text-blue-900"
+            ></i>
+          </button>
+          <button
+            id="brightMode"
+            type="button"
+            class="absolute right-6 top-4 hidden rounded-lg p-1 text-zinc-300"
+          >
+            <i
+              class="bi bi-brightness-low-fill text-3xl hover:text-amber-200"
+            ></i>
+          </button>
+        </div>
+        <!-- Mobile menu -->
+        <div
+          class="hidden bg-gray-200 pb-6 text-xl shadow-lg dark:bg-slate-600 md:hidden"
+          id="mobileMenu"
+        >
+          <ul class="text-gray-600 dark:text-gray-200">
+            <li class="px-8 hover:bg-slate-300 dark:hover:bg-slate-500">
+              <a href="#" class="block py-2">Home</a>
+            </li>
+            <li class="px-8 hover:bg-slate-300 dark:hover:bg-slate-500">
+              <a href="#" class="block py-2">Blogs</a>
+            </li>
+            <li class="px-8 hover:bg-slate-300 dark:hover:bg-slate-500">
+              <a href="#" class="block py-2">About</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main
+      class="mx-auto mt-10 mb-5 grid max-w-7xl grid-cols-1 gap-14 px-5 font-poppins text-gray-500 dark:text-gray-300 lg:grid-cols-3"
+    >
+      <article
+        class="col-span-3 block grid-cols-2 place-items-center gap-14 border-b border-gray-400 pb-10 sm:grid"
+      >
+        <img
+          src="../img/1.jpg"
+          alt="featured img"
+          class="w-full rounded-lg border-4 border-white shadow-md"
+        />
+        <div>
+          <h2 class="my-5 px-2 text-2xl font-bold">Tokyo Ride</h2>
+          <p class="mx-3 my-5">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui
+            incidunt mollitia cupiditate delectus eius veniam quidem sit sint
+            veritatis perspiciatis laborum accusamus molestiae, modi
+            voluptatibus aliquid ipsum est recusandae quo.
+          </p>
+        </div>
+      </article>
+      <article
+        class="col-span-3 block grid-cols-2 gap-14 sm:grid lg:col-span-1 lg:grid-cols-1 lg:gap-0"
+      >
+        <img
+          src="../img/4.jpg"
+          alt="articel img"
+          class="w-full rounded-lg border-4 border-white shadow-md"
+        />
+        <div>
+          <h3 class="mx-2 my-5 text-xl font-bold">Let's Skate</h3>
+          <p class="mx-2 my-5">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, sit
+            quia itaque incidunt fugiat cumque ullam architecto soluta vitae
+            nemo.
+          </p>
+        </div>
+      </article>
+      <article
+        class="col-span-3 block grid-cols-2 gap-14 sm:grid lg:col-span-1 lg:grid-cols-1 lg:gap-0"
+      >
+        <img
+          src="../img/2.jpg"
+          alt="articel img"
+          class="w-full rounded-lg border-4 border-white shadow-md"
+        />
+        <div>
+          <h3 class="mx-2 my-5 text-xl font-bold">Tennis Time</h3>
+          <p class="mx-2 my-5">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, sit
+            quia itaque incidunt fugiat cumque ullam architecto soluta vitae
+            nemo.
+          </p>
+        </div>
+      </article>
+      <article
+        class="col-span-3 block grid-cols-2 gap-14 sm:grid lg:col-span-1 lg:grid-cols-1 lg:gap-0"
+      >
+        <img
+          src="../img/3.jpg"
+          alt="articel img"
+          class="w-full rounded-lg border-4 border-white shadow-md"
+        />
+        <div>
+          <h3 class="mx-2 my-5 text-xl font-bold">Surfing In Sunshine</h3>
+          <p class="mx-2 my-5">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, sit
+            quia itaque incidunt fugiat cumque ullam architecto soluta vitae
+            nemo.
+          </p>
+        </div>
+      </article>
+    </main>
+  </body>
+  <script>
+    //mobile menu
+    const openMenuBtn = document.querySelector('#openMenu');
+    const closeMenuBtn = document.querySelector('#closeMenu');
+    const mobileMenu = document.querySelector('#mobileMenu');
+
+    function toggleMenu() {
+      mobileMenu.classList.toggle('hidden');
+      openMenuBtn.classList.toggle('hidden');
+      closeMenuBtn.classList.toggle('hidden');
+    }
+
+    openMenuBtn.addEventListener('click', toggleMenu);
+    closeMenuBtn.addEventListener('click', toggleMenu);
+
+    //dark mode
+    const darkModeBtn = document.querySelector('#darkMode');
+    const brightModeBtn = document.querySelector('#brightMode');
+    const htmltag = document.querySelector('html');
+    function toggleTheme() {
+      darkModeBtn.classList.toggle('hidden');
+      brightModeBtn.classList.toggle('hidden');
+      htmltag.classList.toggle('dark');
+    }
+    darkModeBtn.addEventListener('click', toggleTheme);
+    brightModeBtn.addEventListener('click', toggleTheme);
+  </script>
+</html>
